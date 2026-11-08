@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Acesso Direto</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      min-height: 100%;
+    }
+
+    body {
+      min-height: 100vh;
+      min-height: 100dvh;
+      background: radial-gradient(circle at center, #4d0037 0%, #1a0014 50%, #000 100%);
+      color: #fff;
+      font-family: 'Roboto', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 25px;
+      max-width: 100vw;
+      padding: 0 20px;
+      z-index: 2;
+    }
+
+    body::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 650px;
+      height: 650px;
+      background: radial-gradient(circle, rgba(255, 26, 191, 0.25) 0%, transparent 80%);
+      filter: blur(80px);
+      animation: glowBackground 6s ease-in-out infinite alternate;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    h1 {
+      font-size: clamp(16px, 4.5vw, 20px);
+      font-weight: 500;
+      letter-spacing: 1.3px;
+      text-transform: uppercase;
+      text-shadow: 0 0 18px rgba(255, 26, 191, 0.7);
+      margin: 0;
+      line-height: 1.5;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .btn {
+      position: relative;
+      display: inline-block;
+      background: linear-gradient(90deg, #ff1abf, #ff4fd8);
+      color: #fff;
+      padding: 14px 36px;
+      border: none;
+      border-radius: 10px;
+      font-size: 15px;
+      font-weight: 500;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 0 25px rgba(255, 26, 191, 0.5);
+      transition: all 0.3s ease;
+      z-index: 1;
+      overflow: hidden;
+      min-width: 160px;
+      text-align: center;
+    }
+
+    .btn::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255, 26, 191, 0.35) 0%, transparent 80%);
+      animation: pulse 3s ease-in-out infinite;
+      z-index: 0;
+    }
+
+    .btn span {
+      position: relative;
+      z-index: 2;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 45px rgba(255, 26, 191, 0.9);
+    }
+
+    p {
+      color: #bbb;
+      font-size: 13px;
+      opacity: 0.85;
+      margin: 0;
+      line-height: 1.5;
+      max-width: 340px;
+    }
+
+    @keyframes pulse {
+      0% { opacity: 0.4; transform: translate(-50%, -50%) scale(1); }
+      50% { opacity: 0.8; transform: translate(-50%, -50%) scale(1.2); }
+      100% { opacity: 0.4; transform: translate(-50%, -50%) scale(1); }
+    }
+
+    @keyframes glowBackground {
+      0% { opacity: 0.3; transform: translate(-50%, -50%) scale(1); }
+      100% { opacity: 0.6; transform: translate(-50%, -50%) scale(1.2); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+
+    fbq('init', '1787317879347060');
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1787317879347060&ev=PageView&noscript=1"/>
+  </noscript>
+  <!-- End Meta Pixel Code -->
+</head>
+
+<body>
+  <div class="container">
+    <h1>Conteúdo exclusivo<br>para maiores de 18 anos</h1>
+    <a class="btn" href="https://acessoamodelosvips.online/l/91f2b445?shk=uu1nqybn"><span>Continuar</span></a>
+    <p>Ao continuar, você declara ter 18 anos ou mais. Se você é menor de idade, feche esta página.</p>
+  </div>
+
+<script>
+(function() {
+  var u = new URLSearchParams(window.location.search);
+  var KEYS = [
+    'utm_source','utm_medium','utm_campaign','utm_content','utm_term','utm_id',
+    'fbclid','ttclid','gclid','_fbp',
+    'tsclid',
+    'click_id','kwai_click_id','kwclid','callback',
+    'src','sck','xcod','cv','shk','ph','_bp','_sp',
+    'salesCode','codigo_de_vendas'
+  ];
+  var captured = {};
+  KEYS.forEach(function(k){ var v = u.get(k); if (v) captured[k] = v; });
+  try {
+    var saved = JSON.parse(sessionStorage.getItem('shark_utms') || '{}');
+    Object.keys(captured).forEach(function(k){ saved[k] = captured[k]; });
+    sessionStorage.setItem('shark_utms', JSON.stringify(saved));
+    captured = saved;
+  } catch(e) {}
+  function buildLink(originalHref) {
+    var url = new URL(originalHref, location.origin);
+    Object.keys(captured).forEach(function(k){
+      if (!url.searchParams.has(k)) url.searchParams.set(k, captured[k]);
+    });
+    return url.toString();
+  }
+  // Reescreve no load, nao no clique. Botao do meio dispara auxclick e "abrir em
+  // nova aba" pelo menu de contexto nem chega a disparar evento: com a reescrita
+  // presa ao clique, essas aberturas levavam a URL sem parametro nenhum.
+  function attach() {
+    document.querySelectorAll('a.button, a.cta, a[href*="/l/"], a[href*="/c/"], a[href*="/b/"]').forEach(function(btn){
+      try { btn.href = buildLink(btn.href); } catch(err) {}
+    });
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', attach);
+  } else {
+    attach();
+  }
+  // Botao inserido depois do load tambem precisa nascer decorado.
+  try {
+    new MutationObserver(attach).observe(document.documentElement, { childList: true, subtree: true });
+  } catch(e) {}
+})();
+</script>
+</body>
+</html>
